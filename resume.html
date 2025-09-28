@@ -1,0 +1,125 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+   <meta charset="UTF-8">
+   <title>Resume - Ahmed Abdul Fatah</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+     <link rel="icon" type="image/png" href="img/favicon.ico">
+   <link rel="stylesheet" href="sara_assets/main.css">
+   <link rel="stylesheet" href="sara_assets/uicons-regular-rounded.css">
+   <link rel="stylesheet" href="sara_assets/uicons-solid-rounded.css">
+   <link rel="preconnect" href="https://fonts.googleapis.com">
+   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+   <link href="sara_assets/css2" rel="stylesheet">
+   <style>
+     /* Fix scrolling - override Sara's main.css */
+     body, html {
+       overflow: auto !important;
+       height: auto !important;
+     }
+
+     .resume-container {
+       max-width: 900px;
+       margin: 0 auto;
+       padding: 20px;
+       background: rgba(255, 255, 255, 0.95);
+       border-radius: 20px;
+       box-shadow: 0 20px 60px rgba(0, 0, 0, 0.1);
+       position: relative;
+       z-index: 10;
+       margin-top: 50px;
+       text-align: center;
+     }
+     .back-button {
+       position: fixed;
+       top: 20px;
+       left: 20px;
+       background: #7F6348;
+       color: white;
+       border: none;
+       padding: 12px 20px;
+       border-radius: 25px;
+       cursor: pointer;
+       font-size: 16px;
+       z-index: 100;
+       transition: all 0.3s ease;
+     }
+     .back-button:hover {
+       background: #6B5139;
+       transform: translateY(-2px);
+     }
+     .resume-image {
+       max-width: 100%;
+       height: auto;
+       border-radius: 15px;
+       box-shadow: 0 10px 30px rgba(0, 0, 0, 0.2);
+       margin: 20px 0;
+     }
+     .download-section {
+       margin-top: 30px;
+       padding: 20px;
+       background: #f8f9fa;
+       border-radius: 15px;
+     }
+     .download-button {
+       display: inline-block;
+       background: #7F6348;
+       color: white;
+       padding: 15px 30px;
+       text-decoration: none;
+       border-radius: 25px;
+       margin: 10px;
+       transition: all 0.3s ease;
+       font-weight: bold;
+     }
+     .download-button:hover {
+       background: #6B5139;
+       transform: translateY(-2px);
+     }
+     .google-drive-button {
+       background: #4285f4;
+     }
+     .google-drive-button:hover {
+       background: #3367d6;
+     }
+   </style>
+</head>
+<body>
+  <button class="back-button" onclick="window.location.href='index.html'">← Back to Portfolio</button>
+
+  <div class="resume-container">
+    <div style="text-align: center; margin-bottom: 30px;">
+      <h1>Ahmed Abdul Fatah - Resume</h1>
+      <p style="font-size: 1.1em; color: #666; margin-top: 15px;">
+        Senior Android Engineer with 6+ years of experience building scalable mobile applications
+      </p>
+    </div>
+
+    <div>
+      <img src="img/framed-resume.png" alt="Ahmed Abdul Fatah Resume" class="resume-image">
+    </div>
+
+    <div class="download-section">
+      <h3>Download Resume</h3>
+      <p style="color: #666; margin-bottom: 20px;">
+        Get a copy of my resume for your records
+      </p>
+      <a href="https://drive.google.com/file/d/1yc1yW9tDQpjWLQwQaxhXBn1alOg0JCWP/view?usp=sharing" target="_blank" class="download-button google-drive-button">
+        📄 View on Google Drive
+      </a>
+      <a href="img/framed-resume.png" download="Ahmed_Abdul_Fatah_Resume.png" class="download-button">
+        💾 Download Image
+      </a>
+    </div>
+
+    <div style="text-align: center; margin-top: 40px; padding: 20px; background: #f8f9fa; border-radius: 15px;">
+      <h3>Let's Connect!</h3>
+      <p>Ready to discuss opportunities? I'd love to hear from you.</p>
+      <div style="margin-top: 20px;">
+        <a href="mailto:ahmedafatah@outlook.com" style="display: inline-block; background: #7F6348; color: white; padding: 12px 25px; text-decoration: none; border-radius: 25px; margin: 0 10px;">📧 Email Me</a>
+        <a href="https://www.linkedin.com/in/ahmedafatah" target="_blank" style="display: inline-block; background: #0077B5; color: white; padding: 12px 25px; text-decoration: none; border-radius: 25px; margin: 0 10px;">💼 LinkedIn</a>
+      </div>
+    </div>
+  </div>
+</body>
+</html>

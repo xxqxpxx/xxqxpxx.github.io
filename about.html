@@ -1,0 +1,242 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+   <meta charset="UTF-8">
+   <title>About - Ahmed Abdul Fatah</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+     <link rel="icon" type="image/png" href="img/favicon.ico">
+   <link rel="stylesheet" href="sara_assets/main.css">
+   <link rel="stylesheet" href="sara_assets/uicons-regular-rounded.css">
+   <link rel="stylesheet" href="sara_assets/uicons-solid-rounded.css">
+   <link rel="preconnect" href="https://fonts.googleapis.com">
+   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+   <link href="sara_assets/css2" rel="stylesheet">
+   <style>
+     /* Fix scrolling - override Sara's main.css */
+     body, html {
+       overflow: auto !important;
+       height: auto !important;
+     }
+
+     .about-container {
+       max-width: 1000px;
+       margin: 0 auto;
+       padding: 40px 20px;
+       background: rgba(255, 255, 255, 0.95);
+       border-radius: 20px;
+       box-shadow: 0 20px 60px rgba(0, 0, 0, 0.1);
+       position: relative;
+       z-index: 10;
+       margin-top: 50px;
+     }
+     .back-button {
+       position: fixed;
+       top: 20px;
+       left: 20px;
+       background: #7F6348;
+       color: white;
+       border: none;
+       padding: 12px 20px;
+       border-radius: 25px;
+       cursor: pointer;
+       font-size: 16px;
+       z-index: 100;
+       transition: all 0.3s ease;
+     }
+     .back-button:hover {
+       background: #6B5139;
+       transform: translateY(-2px);
+     }
+     .profile-section {
+       text-align: center;
+       margin-bottom: 40px;
+     }
+     .profile-img {
+       width: 200px;
+       height: 200px;
+       border-radius: 50%;
+       object-fit: cover;
+       margin-bottom: 20px;
+       border: 5px solid #7F6348;
+     }
+     .skills-grid {
+       display: grid;
+       grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+       gap: 20px;
+       margin: 30px 0;
+     }
+     .skill-category {
+       background: #f8f9fa;
+       padding: 20px;
+       border-radius: 15px;
+       border-left: 4px solid #7F6348;
+     }
+     .experience-timeline {
+       margin: 40px 0;
+     }
+     .timeline-item {
+       background: #f8f9fa;
+       padding: 25px;
+       margin: 20px 0;
+       border-radius: 15px;
+       border-left: 4px solid #7F6348;
+       position: relative;
+     }
+     .company {
+       font-weight: bold;
+       color: #7F6348;
+       font-size: 1.2em;
+     }
+     .position {
+       font-weight: 600;
+       margin: 5px 0;
+     }
+     .duration {
+       color: #666;
+       font-style: italic;
+     }
+     .achievements {
+       margin-top: 15px;
+     }
+     .achievements li {
+       margin: 8px 0;
+     }
+   </style>
+</head>
+<body>
+  <button class="back-button" onclick="window.location.href='index.html'">← Back to Portfolio</button>
+
+  <div class="about-container">
+    <div class="profile-section">
+      <img src="img/profilepic.png" alt="Ahmed Abdul Fatah" class="profile-img">
+      <h1>About Ahmed Abdul Fatah</h1>
+      <h2 style="color: #7F6348; margin-bottom: 30px;">Senior Android Engineer</h2>
+
+      <p style="font-size: 1.2em; line-height: 1.6; color: #555;">
+        I'm a passionate Senior Android Engineer with 6+ years of experience building mobile applications that millions of users love.
+        I specialize in modern Android development using Kotlin, Jetpack Compose, and Clean Architecture patterns.
+      </p>
+    </div>
+
+    <div class="skills-grid">
+      <div class="skill-category">
+        <h3>🛠️ Core Technologies</h3>
+        <ul>
+          <li>Kotlin & Java</li>
+          <li>Jetpack Compose</li>
+          <li>Android SDK</li>
+          <li>Coroutines & Flow</li>
+          <li>RxJava</li>
+        </ul>
+      </div>
+
+      <div class="skill-category">
+        <h3>🏗️ Architecture</h3>
+        <ul>
+          <li>MVVM & MVI</li>
+          <li>Clean Architecture</li>
+          <li>Dependency Injection</li>
+          <li>Modular Design</li>
+          <li>Design Patterns</li>
+        </ul>
+      </div>
+
+      <div class="skill-category">
+        <h3>🧪 Testing & Quality</h3>
+        <ul>
+          <li>JUnit & Espresso</li>
+          <li>Mockito</li>
+          <li>TDD Methodology</li>
+          <li>Code Review</li>
+          <li>Performance Optimization</li>
+        </ul>
+      </div>
+
+      <div class="skill-category">
+        <h3>🔧 Tools & DevOps</h3>
+        <ul>
+          <li>Git & CI/CD</li>
+          <li>ProGuard</li>
+          <li>Gradle</li>
+          <li>Firebase</li>
+          <li>RESTful APIs</li>
+        </ul>
+      </div>
+    </div>
+
+    <div class="experience-timeline">
+      <h2>Professional Experience</h2>
+
+      <div class="timeline-item">
+        <div class="company">Transflo | Remote, USA</div>
+        <div class="position">Senior Android Engineer</div>
+        <div class="duration">April 2023 - Present</div>
+        <div class="achievements">
+          <ul>
+            <li>Led migration from Java/MVC to Kotlin/MVI with Clean Architecture, reducing new feature development time by 15%</li>
+            <li>Refactored background services with WorkManager, reducing crash rate from 2.0% to 1.5%</li>
+            <li>Developed white-label applications serving 100K+ daily users</li>
+            <li>Enhanced app security with advanced ProGuard rules, reducing vulnerability surface area by 60%</li>
+            <li>Mentored junior developers on Android architecture and best practices</li>
+          </ul>
+        </div>
+      </div>
+
+      <div class="timeline-item">
+        <div class="company">AevaPay | UAE</div>
+        <div class="position">Senior Android Engineer</div>
+        <div class="duration">May 2022 - May 2023</div>
+        <div class="achievements">
+          <ul>
+            <li>Developed cryptocurrency payment app for POS machines using Kotlin and Jetpack Compose</li>
+            <li>Implemented Paymob SDK for secure payment processing with 99.9% transaction reliability</li>
+            <li>Reduced UI development time by 35% through adoption of Jetpack Compose</li>
+            <li>Created CI/CD pipeline with automated testing, reducing deployment time from 5 to 3 days</li>
+            <li>Maintained 4.5+ Play Store rating through regular updates and optimizations</li>
+          </ul>
+        </div>
+      </div>
+
+      <div class="timeline-item">
+        <div class="company">Vezeeta | UAE</div>
+        <div class="position">Android Engineer → Senior Android Engineer</div>
+        <div class="duration">September 2019 - May 2022</div>
+        <div class="achievements">
+          <ul>
+            <li>Launched telehealth video/audio consultation feature within 4 weeks during COVID-19</li>
+            <li>Improved app security through custom ProGuard rules, reducing vulnerabilities by 50%</li>
+            <li>Reduced app startup time from 5 seconds to 4 seconds through API caching optimization</li>
+            <li>Refactored codebase from Java/MVP to Kotlin/MVVM, reducing bugs by 30%</li>
+            <li>Implemented alternative SDKs for non-Google devices, expanding user base by 15%</li>
+          </ul>
+        </div>
+      </div>
+
+      <div class="timeline-item">
+        <div class="company">CAT Software House | Egypt</div>
+        <div class="position">Android Developer</div>
+        <div class="duration">May 2018 - September 2019</div>
+        <div class="achievements">
+          <ul>
+            <li>Developed Buseet Driver App with real-time tracking using Kotlin, MVP, and RxJava</li>
+            <li>Built Ta7wela supply chain app for drivers with GPS-based location reporting</li>
+            <li>Created BotBank for Credit Agricole with voice and text query functionality</li>
+            <li>Designed OuiHop ridesharing platform and Soundwalkrs audio tour app</li>
+          </ul>
+        </div>
+      </div>
+    </div>
+
+    <div style="text-align: center; margin-top: 40px; padding: 30px; background: #f8f9fa; border-radius: 15px;">
+      <h3>Let's Connect!</h3>
+      <p>I'm always interested in discussing new opportunities, sharing knowledge, or collaborating on exciting projects.</p>
+      <div style="margin-top: 20px;">
+        <a href="mailto:ahmedafatah@outlook.com" style="display: inline-block; background: #7F6348; color: white; padding: 12px 25px; text-decoration: none; border-radius: 25px; margin: 0 10px;">📧 Email Me</a>
+        <a href="https://www.linkedin.com/in/ahmedafatah" target="_blank" style="display: inline-block; background: #0077B5; color: white; padding: 12px 25px; text-decoration: none; border-radius: 25px; margin: 0 10px;">💼 LinkedIn</a>
+        <a href="https://github.com/xxqxpxx" target="_blank" style="display: inline-block; background: #333; color: white; padding: 12px 25px; text-decoration: none; border-radius: 25px; margin: 0 10px;">🐙 GitHub</a>
+        <a href="resume.html" style="display: inline-block; background: #dc3545; color: white; padding: 12px 25px; text-decoration: none; border-radius: 25px; margin: 0 10px;">📄 Resume</a>
+      </div>
+    </div>
+  </div>
+</body>
+</html>

@@ -1,0 +1,288 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+   <meta charset="UTF-8">
+   <title>Certifications - Ahmed Abdul Fatah</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+     <link rel="icon" type="image/png" href="img/favicon.ico">
+   <link rel="stylesheet" href="sara_assets/main.css">
+   <link rel="stylesheet" href="sara_assets/uicons-regular-rounded.css">
+   <link rel="stylesheet" href="sara_assets/uicons-solid-rounded.css">
+   <link rel="preconnect" href="https://fonts.googleapis.com">
+   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+   <link href="sara_assets/css2" rel="stylesheet">
+   <style>
+     /* Fix scrolling - override Sara's main.css */
+     body, html {
+       overflow: auto !important;
+       height: auto !important;
+     }
+
+     .certifications-container {
+       max-width: 1000px;
+       margin: 0 auto;
+       padding: 40px 20px;
+       background: rgba(255, 255, 255, 0.95);
+       border-radius: 20px;
+       box-shadow: 0 20px 60px rgba(0, 0, 0, 0.1);
+       position: relative;
+       z-index: 10;
+       margin-top: 50px;
+     }
+     .back-button {
+       position: fixed;
+       top: 20px;
+       left: 20px;
+       background: #7F6348;
+       color: white;
+       border: none;
+       padding: 12px 20px;
+       border-radius: 25px;
+       cursor: pointer;
+       font-size: 16px;
+       z-index: 100;
+       transition: all 0.3s ease;
+     }
+     .back-button:hover {
+       background: #6B5139;
+       transform: translateY(-2px);
+     }
+     .cert-grid {
+       display: grid;
+       grid-template-columns: repeat(auto-fit, minmax(400px, 1fr));
+       gap: 30px;
+       margin: 40px 0;
+     }
+     .cert-card {
+       background: white;
+       border-radius: 20px;
+       padding: 30px;
+       box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+       transition: all 0.3s ease;
+       border: 2px solid transparent;
+     }
+     .cert-card:hover {
+       transform: translateY(-5px);
+       box-shadow: 0 20px 40px rgba(0, 0, 0, 0.15);
+       border-color: #7F6348;
+     }
+     .cert-header {
+       display: flex;
+       align-items: center;
+       margin-bottom: 20px;
+     }
+     .cert-icon {
+       width: 60px;
+       height: 60px;
+       background: linear-gradient(135deg, #7F6348 0%, #6B5139 100%);
+       border-radius: 15px;
+       display: flex;
+       align-items: center;
+       justify-content: center;
+       color: white;
+       font-size: 1.5em;
+       margin-right: 20px;
+     }
+     .cert-title {
+       font-size: 1.3em;
+       font-weight: bold;
+       color: #333;
+       margin-bottom: 5px;
+     }
+     .cert-provider {
+       color: #7F6348;
+       font-weight: 600;
+     }
+     .cert-description {
+       color: #666;
+       line-height: 1.6;
+       margin: 15px 0;
+     }
+     .cert-skills {
+       display: flex;
+       flex-wrap: wrap;
+       gap: 8px;
+       margin-top: 20px;
+     }
+     .skill-tag {
+       background: #f0f0f0;
+       color: #555;
+       padding: 5px 12px;
+       border-radius: 15px;
+       font-size: 0.85em;
+       font-weight: 500;
+     }
+     .cert-date {
+       background: #7F6348;
+       color: white;
+       padding: 5px 15px;
+       border-radius: 20px;
+       font-size: 0.9em;
+       display: inline-block;
+       margin-top: 15px;
+     }
+     .achievements-section {
+       background: #f8f9fa;
+       padding: 30px;
+       border-radius: 20px;
+       margin: 40px 0;
+     }
+     .achievement-item {
+       background: white;
+       padding: 20px;
+       border-radius: 15px;
+       margin: 15px 0;
+       border-left: 4px solid #7F6348;
+     }
+   </style>
+</head>
+<body>
+  <button class="back-button" onclick="window.location.href='index.html'">← Back to Portfolio</button>
+
+  <div class="certifications-container">
+    <div style="text-align: center; margin-bottom: 40px;">
+      <h1>Professional Certifications & Education</h1>
+      <p style="font-size: 1.2em; color: #666; margin-top: 20px;">
+        Continuous learning and professional development in mobile technology and computer science
+      </p>
+    </div>
+
+    <div class="cert-grid">
+      <div class="cert-card">
+        <div class="cert-header">
+          <div class="cert-icon">🎓</div>
+          <div>
+            <div class="cert-title">Udacity Android Developer Nanodegree</div>
+            <div class="cert-provider">Udacity</div>
+          </div>
+        </div>
+        <div class="cert-description">
+          Comprehensive program covering modern Android development practices, from UI design to backend integration.
+          Completed multiple real-world projects demonstrating mastery of Android SDK, Material Design, and industry best practices.
+        </div>
+        <div class="cert-skills">
+          <span class="skill-tag">Android SDK</span>
+          <span class="skill-tag">Java</span>
+          <span class="skill-tag">Material Design</span>
+          <span class="skill-tag">SQLite</span>
+          <span class="skill-tag">JSON Parsing</span>
+          <span class="skill-tag">RESTful APIs</span>
+        </div>
+        <div class="cert-date">Completed 2017</div>
+      </div>
+
+      <div class="cert-card">
+        <div class="cert-header">
+          <div class="cert-icon">🏛️</div>
+          <div>
+            <div class="cert-title">CS50: Introduction to Computer Science</div>
+            <div class="cert-provider">Harvard University</div>
+          </div>
+        </div>
+        <div class="cert-description">
+          Harvard's flagship computer science course covering fundamental concepts in computer science and programming.
+          Gained deep understanding of algorithms, data structures, software engineering principles, and problem-solving methodologies.
+        </div>
+        <div class="cert-skills">
+          <span class="skill-tag">C Programming</span>
+          <span class="skill-tag">Python</span>
+          <span class="skill-tag">Data Structures</span>
+          <span class="skill-tag">Algorithms</span>
+          <span class="skill-tag">Memory Management</span>
+          <span class="skill-tag">Web Development</span>
+        </div>
+        <div class="cert-date">Completed 2016</div>
+      </div>
+
+      <div class="cert-card">
+        <div class="cert-header">
+          <div class="cert-icon">🏗️</div>
+          <div>
+            <div class="cert-title">Data Structures & Algorithms</div>
+            <div class="cert-provider">University of New South Wales (UNSW)</div>
+          </div>
+        </div>
+        <div class="cert-description">
+          Advanced coursework in data structures and algorithm design, focusing on efficiency analysis, optimization techniques,
+          and practical implementation of complex algorithms for real-world problem solving.
+        </div>
+        <div class="cert-skills">
+          <span class="skill-tag">Algorithm Design</span>
+          <span class="skill-tag">Time Complexity</span>
+          <span class="skill-tag">Space Complexity</span>
+          <span class="skill-tag">Graph Algorithms</span>
+          <span class="skill-tag">Dynamic Programming</span>
+          <span class="skill-tag">Optimization</span>
+        </div>
+        <div class="cert-date">Completed 2017</div>
+      </div>
+
+      <div class="cert-card">
+        <div class="cert-header">
+          <div class="cert-icon">🎯</div>
+          <div>
+            <div class="cert-title">Bachelor of Science: Computer Science</div>
+            <div class="cert-provider">Shorouk Academy, Egypt</div>
+          </div>
+        </div>
+        <div class="cert-description">
+          Comprehensive computer science education covering software engineering, database systems, computer networks,
+          artificial intelligence, and advanced programming concepts. Graduated with Certificate of Honor from Computer Science Department.
+        </div>
+        <div class="cert-skills">
+          <span class="skill-tag">Software Engineering</span>
+          <span class="skill-tag">Database Systems</span>
+          <span class="skill-tag">Computer Networks</span>
+          <span class="skill-tag">AI & Machine Learning</span>
+          <span class="skill-tag">Object-Oriented Programming</span>
+          <span class="skill-tag">Systems Analysis</span>
+        </div>
+        <div class="cert-date">Graduated 2016</div>
+      </div>
+    </div>
+
+    <div class="achievements-section">
+      <h2 style="text-align: center; margin-bottom: 30px;">Academic Achievements & Recognition</h2>
+
+      <div class="achievement-item">
+        <h3>🏆 Certificate of Honor - Computer Science Department</h3>
+        <p><strong>Shorouk Academy, Egypt | 2016</strong></p>
+        <p>Awarded for outstanding academic performance and demonstrated excellence in computer science coursework.</p>
+      </div>
+
+      <div class="achievement-item">
+        <h3>🏅 ACM-ACPC Regional Contest Participant</h3>
+        <p><strong>Arab Collegiate Programming Contest | 2013-2014</strong></p>
+        <p>Competed in regional programming contests, demonstrating advanced problem-solving skills and algorithmic thinking under pressure.</p>
+      </div>
+
+      <div class="achievement-item">
+        <h3>🏅 ACM-ECPC National Contest Participant</h3>
+        <p><strong>Egyptian Collegiate Programming Contest | 2013-2014</strong></p>
+        <p>Participated in national-level competitive programming contests, showcasing expertise in algorithms and data structures.</p>
+      </div>
+    </div>
+
+    <div style="background: linear-gradient(135deg, #7F6348 0%, #6B5139 100%); color: white; padding: 40px; border-radius: 20px; text-align: center; margin-top: 40px;">
+      <h3>Continuous Learning Philosophy</h3>
+      <p style="margin: 20px 0; font-size: 1.1em; opacity: 0.9;">
+        Technology evolves rapidly, and I believe in staying current with the latest developments in Android,
+        mobile development, and software engineering practices. I regularly engage with new frameworks,
+        attend conferences, and contribute to open-source projects.
+      </p>
+      <div style="margin-top: 30px;">
+        <span style="background: rgba(255, 255, 255, 0.2); padding: 10px 20px; border-radius: 20px; margin: 0 10px; display: inline-block;">🤖 Kotlin Multiplatform</span>
+        <span style="background: rgba(255, 255, 255, 0.2); padding: 10px 20px; border-radius: 20px; margin: 0 10px; display: inline-block;">🎨 Jetpack Compose</span>
+        <span style="background: rgba(255, 255, 255, 0.2); padding: 10px 20px; border-radius: 20px; margin: 0 10px; display: inline-block;">⚡ Clean Architecture</span>
+      </div>
+    </div>
+
+    <div style="text-align: center; margin-top: 40px; padding: 30px; background: #f8f9fa; border-radius: 15px;">
+      <h3>Interested in Learning More?</h3>
+      <p style="margin: 20px 0; color: #666;">Check out my practical applications of these skills in my professional projects</p>
+      <a href="projects.html" style="display: inline-block; background: #7F6348; color: white; padding: 12px 25px; text-decoration: none; border-radius: 25px; margin: 0 10px;">View My Projects</a>
+      <a href="contact.html" style="display: inline-block; background: #666; color: white; padding: 12px 25px; text-decoration: none; border-radius: 25px; margin: 0 10px;">Get In Touch</a>
+    </div>
+  </div>
+</body>
+</html>

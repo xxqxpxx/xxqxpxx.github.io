@@ -1,0 +1,421 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+   <meta charset="UTF-8">
+   <title>Android Projects Gallery - Ahmed Abdul Fatah</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+     <link rel="icon" type="image/png" href="img/favicon.ico">
+   <link rel="stylesheet" href="sara_assets/main.css">
+   <link rel="stylesheet" href="sara_assets/uicons-regular-rounded.css">
+   <link rel="stylesheet" href="sara_assets/uicons-solid-rounded.css">
+   <link rel="preconnect" href="https://fonts.googleapis.com">
+   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+   <link href="sara_assets/css2" rel="stylesheet">
+   <style>
+     /* Fix scrolling - override Sara's main.css */
+     body, html {
+       overflow: auto !important;
+       height: auto !important;
+     }
+
+     .gallery-container {
+       max-width: 1200px;
+       margin: 0 auto;
+       padding: 40px 20px;
+       background: rgba(255, 255, 255, 0.95);
+       border-radius: 20px;
+       box-shadow: 0 20px 60px rgba(0, 0, 0, 0.1);
+       position: relative;
+       z-index: 10;
+       margin-top: 50px;
+     }
+     .back-button {
+       position: fixed;
+       top: 20px;
+       left: 20px;
+       background: #7F6348;
+       color: white;
+       border: none;
+       padding: 12px 20px;
+       border-radius: 25px;
+       cursor: pointer;
+       font-size: 16px;
+       z-index: 100;
+       transition: all 0.3s ease;
+     }
+     .back-button:hover {
+       background: #6B5139;
+       transform: translateY(-2px);
+     }
+     .gallery-header {
+       background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+       color: white;
+       padding: 50px;
+       border-radius: 20px;
+       text-align: center;
+       margin: 40px 0;
+       position: relative;
+       overflow: hidden;
+     }
+     .gallery-grid {
+       display: grid;
+       grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
+       gap: 30px;
+       margin: 40px 0;
+     }
+     .project-showcase {
+       background: white;
+       border-radius: 20px;
+       overflow: hidden;
+       box-shadow: 0 15px 35px rgba(0, 0, 0, 0.1);
+       transition: all 0.3s ease;
+       border: 3px solid transparent;
+     }
+     .project-showcase:hover {
+       transform: translateY(-10px);
+       box-shadow: 0 25px 50px rgba(0, 0, 0, 0.2);
+       border-color: #7F6348;
+     }
+     .project-mockup {
+       height: 300px;
+       background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+       position: relative;
+       display: flex;
+       align-items: center;
+       justify-content: center;
+       overflow: hidden;
+     }
+     .phone-mockup {
+       width: 180px;
+       height: 360px;
+       background: #333;
+       border-radius: 25px;
+       position: relative;
+       box-shadow: 0 10px 30px rgba(0, 0, 0, 0.3);
+     }
+     .phone-screen {
+       width: 160px;
+       height: 320px;
+       background: #000;
+       border-radius: 15px;
+       position: absolute;
+       top: 20px;
+       left: 10px;
+       display: flex;
+       align-items: center;
+       justify-content: center;
+       color: white;
+       font-size: 3em;
+       background: linear-gradient(135deg, #1e3c72 0%, #2a5298 100%);
+     }
+     .project-info {
+       padding: 25px;
+     }
+     .project-name {
+       font-size: 1.5em;
+       font-weight: bold;
+       color: #333;
+       margin-bottom: 10px;
+     }
+     .project-type {
+       color: #7F6348;
+       font-weight: 600;
+       margin-bottom: 15px;
+     }
+     .project-desc {
+       color: #666;
+       line-height: 1.6;
+       margin-bottom: 20px;
+     }
+     .tech-highlights {
+       display: flex;
+       flex-wrap: wrap;
+       gap: 8px;
+       margin-bottom: 20px;
+     }
+     .tech-highlight {
+       background: #f0f0f0;
+       color: #555;
+       padding: 5px 12px;
+       border-radius: 15px;
+       font-size: 0.85em;
+     }
+     .github-btn {
+       display: inline-block;
+       background: #333;
+       color: white;
+       padding: 10px 20px;
+       text-decoration: none;
+       border-radius: 20px;
+       font-size: 0.9em;
+       transition: all 0.3s ease;
+     }
+     .github-btn:hover {
+       background: #555;
+       transform: translateY(-2px);
+     }
+     .skills-showcase {
+       background: #f8f9fa;
+       padding: 40px;
+       border-radius: 20px;
+       margin: 40px 0;
+       text-align: center;
+     }
+     .skills-grid {
+       display: grid;
+       grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+       gap: 25px;
+       margin: 30px 0;
+     }
+     .skill-item {
+       background: white;
+       padding: 25px;
+       border-radius: 15px;
+       box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+     }
+     .skill-icon {
+       font-size: 2.5em;
+       margin-bottom: 15px;
+     }
+   </style>
+</head>
+<body>
+  <button class="back-button" onclick="window.location.href='index.html'">← Back to Portfolio</button>
+
+  <div class="gallery-container">
+    <div class="gallery-header">
+      <h1 style="font-size: 3em; margin-bottom: 20px;">🎨 Android Projects Gallery</h1>
+      <p style="font-size: 1.3em; opacity: 0.9;">
+        Where code meets creativity - showcasing mobile applications that blend innovative technology with exceptional user experience
+      </p>
+    </div>
+
+    <div style="text-align: center; margin: 40px 0;">
+      <h2>Featured Android Applications</h2>
+      <p style="color: #666; font-size: 1.1em; margin-top: 15px;">
+        Each app represents a unique challenge solved with modern Android development practices
+      </p>
+    </div>
+
+    <div class="gallery-grid">
+      <!-- Transflo Mobile+ -->
+      <div class="project-showcase">
+        <div class="project-mockup" style="background: linear-gradient(135deg, #FF6B6B 0%, #FF8E8E 100%);">
+          <div class="phone-mockup">
+            <div class="phone-screen" style="background: linear-gradient(135deg, #FF6B6B 0%, #FF8E8E 100%);">
+              🚚
+            </div>
+          </div>
+        </div>
+        <div class="project-info">
+          <div class="project-name">Transflo Mobile+</div>
+          <div class="project-type">Enterprise Logistics Platform</div>
+          <div class="project-desc">
+            Revolutionizing freight management with $115B+ in annual transactions. Built with modern Kotlin/MVI architecture serving 100K+ daily users.
+          </div>
+          <div class="tech-highlights">
+            <span class="tech-highlight">Kotlin</span>
+            <span class="tech-highlight">MVI</span>
+            <span class="tech-highlight">Clean Architecture</span>
+            <span class="tech-highlight">Jetpack Compose</span>
+          </div>
+          <a href="https://github.com/xxqxpxx" target="_blank" class="github-btn">View on GitHub →</a>
+        </div>
+      </div>
+
+      <!-- Vezeeta Patient -->
+      <div class="project-showcase">
+        <div class="project-mockup" style="background: linear-gradient(135deg, #4ECDC4 0%, #44A08D 100%);">
+          <div class="phone-mockup">
+            <div class="phone-screen" style="background: linear-gradient(135deg, #4ECDC4 0%, #44A08D 100%);">
+              🏥
+            </div>
+          </div>
+        </div>
+        <div class="project-info">
+          <div class="project-name">Vezeeta Patient</div>
+          <div class="project-type">Healthcare Booking Platform</div>
+          <div class="project-desc">
+            Connecting patients with doctors across 5+ countries. Features telehealth capabilities and serves over 1M+ users with secure medical consultations.
+          </div>
+          <div class="tech-highlights">
+            <span class="tech-highlight">Kotlin</span>
+            <span class="tech-highlight">MVVM</span>
+            <span class="tech-highlight">Video SDK</span>
+            <span class="tech-highlight">Security</span>
+          </div>
+          <a href="https://github.com/xxqxpxx" target="_blank" class="github-btn">View on GitHub →</a>
+        </div>
+      </div>
+
+      <!-- AevaPay -->
+      <div class="project-showcase">
+        <div class="project-mockup" style="background: linear-gradient(135deg, #A8E6CF 0%, #7FCDCD 100%);">
+          <div class="phone-mockup">
+            <div class="phone-screen" style="background: linear-gradient(135deg, #A8E6CF 0%, #7FCDCD 100%);">
+              💰
+            </div>
+          </div>
+        </div>
+        <div class="project-info">
+          <div class="project-name">AevaPay</div>
+          <div class="project-type">Cryptocurrency Payment Solution</div>
+          <div class="project-desc">
+            Next-generation crypto payment app for POS systems. Built with Jetpack Compose, achieving 99.9% transaction reliability and 4.5+ star rating.
+          </div>
+          <div class="tech-highlights">
+            <span class="tech-highlight">Jetpack Compose</span>
+            <span class="tech-highlight">Cryptocurrency</span>
+            <span class="tech-highlight">Payment SDK</span>
+            <span class="tech-highlight">CI/CD</span>
+          </div>
+          <a href="https://github.com/xxqxpxx" target="_blank" class="github-btn">View on GitHub →</a>
+        </div>
+      </div>
+
+      <!-- Kotobi by Vodafone -->
+      <div class="project-showcase">
+        <div class="project-mockup" style="background: linear-gradient(135deg, #FFD93D 0%, #FF6B6B 100%);">
+          <div class="phone-mockup">
+            <div class="phone-screen" style="background: linear-gradient(135deg, #FFD93D 0%, #FF6B6B 100%);">
+              📚
+            </div>
+          </div>
+        </div>
+        <div class="project-info">
+          <div class="project-name">Kotobi by Vodafone</div>
+          <div class="project-type">Digital Reading Platform</div>
+          <div class="project-desc">
+            Comprehensive Arabic digital library with 10,000+ books and 30+ periodicals. Enhanced user experience serving 500K+ readers across the region.
+          </div>
+          <div class="tech-highlights">
+            <span class="tech-highlight">Android SDK</span>
+            <span class="tech-highlight">Performance</span>
+            <span class="tech-highlight">Arabic Support</span>
+            <span class="tech-highlight">UX Design</span>
+          </div>
+          <a href="https://github.com/xxqxpxx" target="_blank" class="github-btn">View on GitHub →</a>
+        </div>
+      </div>
+
+      <!-- Buseet Driver App -->
+      <div class="project-showcase">
+        <div class="project-mockup" style="background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);">
+          <div class="phone-mockup">
+            <div class="phone-screen" style="background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);">
+              🚌
+            </div>
+          </div>
+        </div>
+        <div class="project-info">
+          <div class="project-name">Buseet Driver App</div>
+          <div class="project-type">Transportation Management</div>
+          <div class="project-desc">
+            Real-time bus tracking and management solution. Built with MVP architecture, RxJava, and Firebase for seamless driver-passenger coordination.
+          </div>
+          <div class="tech-highlights">
+            <span class="tech-highlight">Kotlin</span>
+            <span class="tech-highlight">MVP</span>
+            <span class="tech-highlight">RxJava</span>
+            <span class="tech-highlight">Firebase</span>
+          </div>
+          <a href="https://github.com/xxqxpxx" target="_blank" class="github-btn">View on GitHub →</a>
+        </div>
+      </div>
+
+      <!-- Ta7wela Supply Chain -->
+      <div class="project-showcase">
+        <div class="project-mockup" style="background: linear-gradient(135deg, #f093fb 0%, #f5576c 100%);">
+          <div class="phone-mockup">
+            <div class="phone-screen" style="background: linear-gradient(135deg, #f093fb 0%, #f5576c 100%);">
+              📦
+            </div>
+          </div>
+        </div>
+        <div class="project-info">
+          <div class="project-name">Ta7wela Supply Chain</div>
+          <div class="project-type">Logistics & Supply Chain</div>
+          <div class="project-desc">
+            Advanced supply chain management for drivers with GPS-based tracking and real-time order management. Streamlining logistics operations nationwide.
+          </div>
+          <div class="tech-highlights">
+            <span class="tech-highlight">GPS Tracking</span>
+            <span class="tech-highlight">Real-time</span>
+            <span class="tech-highlight">Order Management</span>
+            <span class="tech-highlight">Location Services</span>
+          </div>
+          <a href="https://github.com/xxqxpxx" target="_blank" class="github-btn">View on GitHub →</a>
+        </div>
+      </div>
+    </div>
+
+    <div class="skills-showcase">
+      <h2>Development Expertise</h2>
+      <p style="color: #666; margin-bottom: 30px;">The technical skills and tools that power these applications</p>
+
+      <div class="skills-grid">
+        <div class="skill-item">
+          <div class="skill-icon">🤖</div>
+          <h3>Modern Android</h3>
+          <p style="color: #666; font-size: 0.9em;">Kotlin, Jetpack Compose, Android 14+</p>
+        </div>
+
+        <div class="skill-item">
+          <div class="skill-icon">🏗️</div>
+          <h3>Architecture</h3>
+          <p style="color: #666; font-size: 0.9em;">MVVM, MVI, Clean Architecture</p>
+        </div>
+
+        <div class="skill-item">
+          <div class="skill-icon">⚡</div>
+          <h3>Performance</h3>
+          <p style="color: #666; font-size: 0.9em;">Memory optimization, ANR prevention</p>
+        </div>
+
+        <div class="skill-item">
+          <div class="skill-icon">🧪</div>
+          <h3>Testing</h3>
+          <p style="color: #666; font-size: 0.9em;">JUnit, Espresso, TDD</p>
+        </div>
+
+        <div class="skill-item">
+          <div class="skill-icon">🔒</div>
+          <h3>Security</h3>
+          <p style="color: #666; font-size: 0.9em;">ProGuard, encryption, secure coding</p>
+        </div>
+
+        <div class="skill-item">
+          <div class="skill-icon">🚀</div>
+          <h3>DevOps</h3>
+          <p style="color: #666; font-size: 0.9em;">CI/CD, automated testing, releases</p>
+        </div>
+      </div>
+    </div>
+
+    <div style="background: linear-gradient(135deg, #7F6348 0%, #6B5139 100%); color: white; padding: 50px; border-radius: 20px; text-align: center; margin: 40px 0;">
+      <h3 style="font-size: 2.5em; margin-bottom: 20px;">🎯 Crafting Digital Experiences</h3>
+      <p style="font-size: 1.2em; margin-bottom: 30px; opacity: 0.9;">
+        Each project is a canvas where I blend technical excellence with creative problem-solving.
+        From enterprise logistics to healthcare innovation, every app tells a story of users' needs met with elegant solutions.
+      </p>
+      <div style="margin-top: 30px;">
+        <a href="https://github.com/xxqxpxx" target="_blank" style="display: inline-block; background: rgba(255, 255, 255, 0.2); color: white; padding: 15px 30px; text-decoration: none; border-radius: 25px; margin: 0 15px; border: 2px solid rgba(255, 255, 255, 0.3); transition: all 0.3s ease;">
+          🐙 Explore More on GitHub
+        </a>
+        <a href="projects.html" style="display: inline-block; background: rgba(255, 255, 255, 0.2); color: white; padding: 15px 30px; text-decoration: none; border-radius: 25px; margin: 0 15px; border: 2px solid rgba(255, 255, 255, 0.3); transition: all 0.3s ease;">
+          📊 View Detailed Projects
+        </a>
+      </div>
+    </div>
+
+    <div style="text-align: center; margin-top: 40px; padding: 30px; background: #f8f9fa; border-radius: 15px;">
+      <h3>Interested in Collaborating?</h3>
+      <p style="margin: 20px 0; color: #666;">
+        Let's create something amazing together. Whether it's your next mobile app or an innovative solution to a complex problem.
+      </p>
+      <a href="contact.html" style="display: inline-block; background: #7F6348; color: white; padding: 12px 25px; text-decoration: none; border-radius: 25px; margin: 0 10px;">Start a Project</a>
+      <a href="about.html" style="display: inline-block; background: #666; color: white; padding: 12px 25px; text-decoration: none; border-radius: 25px; margin: 0 10px;">Learn More</a>
+    </div>
+  </div>
+</body>
+</html>

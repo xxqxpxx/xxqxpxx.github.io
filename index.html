@@ -1,162 +1,168 @@
 <!DOCTYPE html>
 <html lang="en">
-
 <head>
-
-    <meta charset="utf-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+   <meta charset="UTF-8">
+   <title>Ahmed Abdul Fatah - Senior Android Engineer</title>
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    <meta name="description" content="">
-    <meta name="author" content="">
+     <link rel="icon" type="image/png" href="img/favicon.ico">
+   <link rel="stylesheet" href="sara_assets/main.css">
+   <link rel="stylesheet" href="sara_assets/uicons-regular-rounded.css">
+   <link rel="stylesheet" href="sara_assets/uicons-solid-rounded.css">
+   <link rel="preconnect" href="https://fonts.googleapis.com">
+   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+   <link href="sara_assets/css2" rel="stylesheet">
+   <script src="sara_assets/dotlottie-wc.js" type="module"></script>
 
-    <title>Ahmed A.Fatah | Me And My Mind</title>
-    <link rel="icon" type="image/vnd.microsoft.icon"
-     href="img/favicon.ico" />
+   <style>
+     .commits-count-text {
+       font-size: 0.9em;
+       opacity: 0.8;
+       color: #666;
+     }
 
-    <!-- Bootstrap Core CSS -->
-    <link href="css/bootstrap.min.css" rel="stylesheet">
+     body.night-mode .commits-count-text {
+       color: #ccc;
+     }
+   </style>
+ </head>
 
-    <!-- Custom CSS -->
-    <link href="css/grayscale.css" rel="stylesheet">
+  <body>
 
-    <!-- Custom Fonts -->
-    <link href="font-awesome/css/font-awesome.min.css" rel="stylesheet" type="text/css">
-    <link href="http://fonts.googleapis.com/css?family=Lora:400,700,400italic,700italic" rel="stylesheet" type="text/css">
-    <link href="http://fonts.googleapis.com/css?family=Montserrat:400,700" rel="stylesheet" type="text/css">
+   <div class="room-wrapper">
+     <div class="ambient-light"></div>
+      <span id="greeting" class="greeting">Good Evening!</span>
+      <span id="greeting-icon" class="greeting-icon"><svg width="20" height="20" viewBox="0 0 219.786 219.786" fill="#7F6348" xmlns="http://www.w3.org/2000/svg"><g><path d="M109.881,183.46c-4.142,0-7.5,3.358-7.5,7.5v21.324c0,4.142,3.358,7.5,7.5,7.5c4.143,0,7.5-3.358,7.5-7.5V190.96C117.381,186.817,114.023,183.46,109.881,183.46z"></path><path d="M109.881,36.329c4.143,0,7.5-3.358,7.5-7.5V7.503c0-4.142-3.357-7.5-7.5-7.5c-4.142,0-7.5,3.358-7.5,7.5v21.326C102.381,32.971,105.739,36.329,109.881,36.329z"></path><path d="M47.269,161.909l-15.084,15.076c-2.93,2.928-2.931,7.677-0.003,10.606c1.465,1.465,3.385,2.198,5.305,2.198c1.919,0,3.837-0.732,5.302-2.195l15.084-15.076c2.93-2.928,2.931-7.677,0.003-10.606C54.946,158.982,50.198,158.982,47.269,161.909z"></path><path d="M167.208,60.067c1.919,0,3.838-0.732,5.303-2.196l15.082-15.076c2.929-2.929,2.93-7.677,0.002-10.607c-2.929-2.93-7.677-2.931-10.607-0.001l-15.082,15.076c-2.929,2.928-2.93,7.677-0.002,10.606C163.368,59.335,165.288,60.067,167.208,60.067z"></path><path d="M36.324,109.895c0-4.142-3.358-7.5-7.5-7.5H7.5c-4.142,0-7.5,3.358-7.5,7.5c0,4.142,3.358,7.5,7.5,7.5h21.324C32.966,117.395,36.324,114.037,36.324,109.895z"></path><path d="M212.286,102.395h-21.334c-4.143,0-7.5,3.358-7.5,7.5c0,4.142,3.357,7.5,7.5,7.5h21.334c4.143,0,7.5-3.358,7.5-7.5C219.786,105.754,216.429,102.395,212.286,102.395z"></path><path d="M47.267,57.871c1.464,1.464,3.384,2.196,5.303,2.196c1.919,0,3.839-0.732,5.303-2.196c2.929-2.929,2.929-7.678,0-10.607L42.797,32.188c-2.929-2.929-7.678-2.929-10.606,0c-2.929,2.929-2.929,7.678,0,10.606L47.267,57.871z"></path><path d="M172.52,161.911c-2.929-2.929-7.678-2.93-10.607-0.001c-2.93,2.929-2.93,7.678-0.001,10.606l15.074,15.076c1.465,1.465,3.384,2.197,5.304,2.197c1.919,0,3.839-0.732,5.303-2.196c2.93-2.929,2.93-7.678,0.001-10.606L172.52,161.911z"></path><path d="M109.889,51.518c-32.187,0-58.373,26.188-58.373,58.377c0,32.188,26.186,58.375,58.373,58.375c32.19,0,58.378-26.187,58.378-58.375C168.267,77.706,142.078,51.518,109.889,51.518z M109.889,153.27c-23.916,0-43.373-19.458-43.373-43.375c0-23.918,19.457-43.377,43.373-43.377c23.919,0,43.378,19.459,43.378,43.377C153.267,133.812,133.808,153.27,109.889,153.27z"></path></g></svg></span>
+     <p class="welcome-msg">Welcome to the digital space of a Senior Android Engineer</p>
+     <span id="current-time" class="current-time"><span class="tea-count-text"><i class="tea-icon fi fi-rr-mug-hot-alt"></i>5000+ commits pushed</span> · <span id="live-time">00:00:00 AM</span></span>
+   <div class="room">
+       <div class="mode-toggle">
+         <input type="checkbox" id="mode-switch" class="mode-switch">
+         <label for="mode-switch" class="toggle-label">
+           <span class="toggle-icon sun-icon">
+             <svg width="16" height="16" viewBox="0 0 219.786 219.786" fill="#7F6348" xmlns="http://www.w3.org/2000/svg">
+               <g><path d="M109.881,183.46c-4.142,0-7.5,3.358-7.5,7.5v21.324c0,4.142,3.358,7.5,7.5,7.5c4.143,0,7.5-3.358,7.5-7.5V190.96C117.381,186.817,114.023,183.46,109.881,183.46z"></path><path d="M109.881,36.329c4.143,0,7.5-3.358,7.5-7.5V7.503c0-4.142-3.357-7.5-7.5-7.5c-4.142,0-7.5,3.358-7.5,7.5v21.326C102.381,32.971,105.739,36.329,109.881,36.329z"></path><path d="M47.269,161.909l-15.084,15.076c-2.93,2.928-2.931,7.677-0.003,10.606c1.465,1.465,3.385,2.198,5.305,2.198c1.919,0,3.837-0.732,5.302-2.195l15.084-15.076c2.93-2.928,2.931-7.677,0.003-10.606C54.946,158.982,50.198,158.982,47.269,161.909z"></path><path d="M167.208,60.067c1.919,0,3.838-0.732,5.303-2.196l15.082-15.076c2.929-2.929,2.93-7.677,0.002-10.607c-2.929-2.93-7.677-2.931-10.607-0.001l-15.082,15.076c-2.929,2.928-2.93,7.677-0.002,10.606C163.368,59.335,165.288,60.067,167.208,60.067z"></path><path d="M36.324,109.895c0-4.142-3.358-7.5-7.5-7.5H7.5c-4.142,0-7.5,3.358-7.5,7.5c0,4.142,3.358,7.5,7.5,7.5h21.324C32.966,117.395,36.324,114.037,36.324,109.895z"></path><path d="M212.286,102.395h-21.334c-4.143,0-7.5,3.358-7.5,7.5c0,4.142,3.357,7.5,7.5,7.5h21.334c4.143,0,7.5-3.358,7.5-7.5C219.786,105.754,216.429,102.395,212.286,102.395z"></path><path d="M47.267,57.871c1.464,1.464,3.384,2.196,5.303,2.196c1.919,0,3.839-0.732,5.303-2.196c2.929-2.929,2.929-7.678,0-10.607L42.797,32.188c-2.929-2.929-7.678-2.929-10.606,0c-2.929,2.929-2.929,7.678,0,10.606L47.267,57.871z"></path><path d="M172.52,161.911c-2.929-2.929-7.678-2.93-10.607-0.001c-2.93,2.929-2.93,7.678-0.001,10.606l15.074,15.076c1.465,1.465,3.384,2.197,5.304,2.197c1.919,0,3.839-0.732,5.303-2.196c2.93-2.929,2.93-7.678,0.001-10.606L172.52,161.911z"></path><path d="M109.889,51.518c-32.187,0-58.373,26.188-58.373,58.377c0,32.188,26.186,58.375,58.373,58.375c32.19,0,58.378-26.187,58.378-58.375C168.267,77.706,142.078,51.518,109.889,51.518z M109.889,153.27c-23.916,0-43.373-19.458-43.373-43.375c0-23.918,19.457-43.377,43.373-43.377c23.919,0,43.378,19.459,43.378,43.377C153.267,133.812,133.808,153.27,109.889,153.27z"></path></g>
+             </svg>
+           </span>
+           <span class="toggle-icon moon-icon">
+             <svg width="16" height="16" viewBox="0 0 512 512" fill="#7F6348" xmlns="http://www.w3.org/2000/svg">
+               <circle cx="467" cy="45" r="15"></circle><path d="m257 512c111.999 0 207.212-73.213 241.418-174.356 2.137-6.319-.155-13.289-5.625-17.106-5.471-3.817-12.803-3.564-17.997.622-32.341 26.063-71.345 39.84-112.796 39.84-99.804 0-181-80.748-181-180 0-61.371 32.685-120.091 85.3-153.243 5.643-3.556 8.26-10.41 6.423-16.822-1.802-6.289-7.464-10.67-13.974-10.862-.356-.027-.989-.073-1.749-.073-140.874 0-257 114.957-257 256 0 140.992 116.068 256 257 256zm-46.436-477.247c-38.416 39.855-59.564 92.385-59.564 146.247 0 115.794 94.654 210 211 210 30.463 0 60.542-6.738 87.993-19.419-40.087 67.52-112.846 110.419-192.993 110.419-125.168 0-227-101.383-227-226 0-108.781 77.585-199.856 180.564-221.247z"></path><path d="m287 120c24.392 0 45 21.065 45 46 0 8.284 6.716 15 15 15s15-6.716 15-15c0-24.935 20.607-46 45-46 8.284 0 15-6.716 15-15s-6.716-15-15-15c-24.813 0-45-20.187-45-45 0-8.284-6.716-15-15-15s-15 6.716-15 15c0 24.813-20.187 45-45 45-8.284 0-15 6.716-15 15s6.716 15 15 15zm60-30.052c4.331 5.766 9.472 10.891 15.253 15.203-5.783 4.409-10.865 9.568-15.253 15.48-4.387-5.911-9.468-11.069-15.253-15.48 5.782-4.312 10.922-9.437 15.253-15.203z"></path><circle cx="497" cy="166" r="15"></circle>
+             </svg>
+           </span>
+           <span class="toggle-slider"></span>
+         </label>
+       </div>
 
-    <!-- HTML5 Shim and Respond.js IE8 support of HTML5 elements and media queries -->
-    <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
-    <!--[if lt IE 9]>
-        <script src="https://oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js"></script>
-        <script src="https://oss.maxcdn.com/libs/respond.js/1.4.2/respond.min.js"></script>
-    <![endif]-->
+       <div class="sound-toggle">
+         <button id="sound-toggle-btn" class="sound-btn">
+           <svg class="sound-icon volume-on" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor">
+             <path stroke-linecap="round" stroke-linejoin="round" d="M19.114 5.636a9 9 0 0 1 0 12.728M16.463 8.288a5.25 5.25 0 0 1 0 7.424M6.75 8.25l4.72-4.72a.75.75 0 0 1 1.28.53v15.88a.75.75 0 0 1-1.28.53l-4.72-4.72H4.5c-.69 0-1.25-.56-1.25-1.25v-6.5c0-.69.56-1.25 1.25-1.25h2.25Z"></path>
+           </svg>
+           <svg class="sound-icon volume-off" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor">
+             <path stroke-linecap="round" stroke-linejoin="round" d="M17.25 9.75 19.5 12m0 0 2.25 2.25M19.5 12l2.25-2.25M19.5 12l-2.25 2.25m-12-5.25 4.72-4.72a.75.75 0 0 1 1.28.53v15.88a.75.75 0 0 1-1.28.53l-4.72-4.72H4.5c-.69 0-1.25-.56-1.25-1.25v-6.5c0-.69.56-1.25 1.25-1.25h2.25Z"></path>
+           </svg>
+         </button>
+       </div>
 
-</head>
+       <!-- Audio files loaded from img directory -->
+       <audio id="birds-audio" loop preload="none">
+         <source src="img/brids.wav" type="audio/wav">
+       </audio>
 
-<body id="page-top" data-spy="scroll" data-target=".navbar-fixed-top">
+       <audio id="night-audio" loop preload="none">
+         <source src="img/night.wav" type="audio/wav">
+       </audio>
 
-    <!-- Navigation -->
-    <nav  class="navbar navbar-custom navbar-fixed-top" role="navigation">
-        <div class="container">
-            <div class="navbar-header">
-                <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-main-collapse">
-                    <i class="fa fa-bars"></i>
-                </button>
-                <a class="navbar-brand page-scroll" href="#helloo">
-                    <span class="glyphicon glyphicon-user"></span><span class="light">   About</span>
-                </a>
-            </div>
+       <div class="css-clock" id="css-clock">
+         <div class="clock-face">
+           <div class="clock-center"></div>
+           <div class="clock-hand hour-hand" id="hour-hand"></div>
+           <div class="clock-hand minute-hand" id="minute-hand"></div>
+           <div class="clock-hand second-hand" id="second-hand"></div>
+           <div class="clock-number" style="top: 5%; left: 50%; transform: translateX(-50%);">12</div>
+           <div class="clock-number" style="top: 50%; right: 5%; transform: translateY(-50%);">3</div>
+           <div class="clock-number" style="bottom: 5%; left: 50%; transform: translateX(-50%);">6</div>
+           <div class="clock-number" style="top: 50%; left: 5%; transform: translateY(-50%);">9</div>
+         </div>
+       </div>
+        <img src="sara_assets/Resume.png" class="frame1 clickable" alt="Resume" loading="lazy" decoding="async">
+       <div class="frame1-tooltip">Resume <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="tooltip-icon">
+   <path stroke-linecap="round" stroke-linejoin="round" d="M13.5 6H5.25A2.25 2.25 0 0 0 3 8.25v10.5A2.25 2.25 0 0 0 5.25 21h10.5A2.25 2.25 0 0 0 18 18.75V10.5m-10.5 6L21 3m0 0h-5.25M21 3v5.25"></path>
+ </svg></div>
+        <img src="sara_assets/certificate-2.png" class="frame2 clickable" alt="Certifications" loading="lazy" decoding="async">
+       <div class="frame2-tooltip">Certifications</div>
+      <img src="sara_assets/sofa.png" class="sofa" alt="Sofa" loading="lazy" decoding="async">
+      <img src="sara_assets/easel-.png" class="easel clickable" alt="Code Projects" loading="lazy" decoding="async">
+       <div class="easel-tooltip">Android Projects</div>
+       <div class="garden-scene" id="garden-scene">
+         <div class="garden-sky morning" id="garden-sky">
+           <div class="sun" id="sun"></div>
+           <div class="moon" id="moon"></div>
+         </div>
+          <img src="sara_assets/garden1.png" class="garden-background" alt="Garden Background" style="height: 300px;" loading="lazy" decoding="async">
+          <img src="sara_assets/tree.png" class="garden-tree" alt="Garden Tree" loading="lazy" decoding="async">
+         <dotlottie-wc src="https://lottie.host/c3dd49e2-c8e9-497c-bcad-183f7b1ccad3/88ZycavREn.lottie" class="lottie-butterfly" speed="1" autoplay loop>
+         </dotlottie-wc>
+       </div>
+        <img src="sara_assets/window.png" class="window" alt="Window" loading="lazy" decoding="async">
+      <img src="sara_assets/curtain.png" class="curtain" alt="Curtain" loading="lazy" decoding="async">
+      <img src="sara_assets/bookshelf.png" class="bookshelf" alt="Bookshelf" loading="lazy" decoding="async">
+        <img src="sara_assets/phone.png" class="phone clickable" alt="Phone" loading="lazy" decoding="async">
+       <div class="phone-tooltip">Contact me</div>
+        <img src="sara_assets/Newspaper1.png" class="newspaper clickable" alt="Blog" loading="lazy" decoding="async">
+       <div class="newspaper-tooltip">Tech Blog</div>
+      <img src="img/profilepic.png" class="portrait clickable" alt="About" loading="lazy" decoding="async" style="object-fit: cover; border: 2px solid #8B4513; border-radius: 8px; box-shadow: 0 2px 8px rgba(0,0,0,0.3);">
+       <div class="portrait-tooltip">About</div>
+        <img src="sara_assets/Lamp-.png" class="lamp" alt="Lamp" loading="lazy" decoding="async">
+      <img src="sara_assets/table-2.png" class="table clickable" alt="Projects" loading="lazy" decoding="async">
+       <div class="table-tooltip">My Projects</div>
+        <img src="sara_assets/quote.png" class="quote clickable" alt="Quote" loading="lazy" decoding="async">
+        <img src="sara_assets/carpet.png" class="carpet" alt="Carpet" loading="lazy" decoding="async">
+        <img src="sara_assets/cup.png" class="cup" alt="Cup" loading="lazy" decoding="async">
+        <img src="sara_assets/Teapot.png" class="teapot" alt="Teapot" loading="lazy" decoding="async">
+       <div class="teapot-steam"></div>
+       <div class="tea-pour"></div>
+       <div class="steam"></div>
+       <div class="floor"></div>
 
-            <!-- Collect the nav links, forms, and other content for toggling -->
-            <div class="collapse navbar-collapse navbar-right navbar-main-collapse">
-                <ul class="nav navbar-nav">
-                    <!-- Hidden li included to remove active class from about link when scrolled up past about section -->
-                    <li class="hidden">
-                        <a href="#page-top"></a>
-                    </li>
-                    <li>
-                        <a class="page-scroll" href="https://github.com/xxqxpxx?tab=repositories"><span class="glyphicon glyphicon-wrench"></span>  Projects</a>
-                    </li>
-                    <li>
-                        <a class="page-scroll" href="#download"><span class="glyphicon glyphicon-list-alt"></span>  Resume</a>
-                    </li>
-                    <li>
-                        <a class="page-scroll" href="blog/blog.html"><span class="glyphicon glyphicon-blackboard"></span>  Blog</a>
-                    </li>
-                </ul>
-            </div>
-            <!-- /.navbar-collapse -->
-        </div>
-        <!-- /.container -->
-    </nav>
+     </div>
+   </div>
 
-    <!-- Intro Header -->
-    <header class="intro">
-        <div class="intro-body">
-            <div class="container">
-                <div class="row">
-                    <div class="col-md-8 col-md-offset-2">
-                        <h1 class="brand-heading">Ahmed Abdul Fatah</h1>
-                        <p class="intro-text">A sarcastic philosophical computer science student</p> 
-                        <!-- ../img/purble2.jpg -->
-                        <img src="img/pic.png" alt="Just in case" title="Tooltip" height="300px" width="300px" />
-                    </div>
-                </div>
-            </div>
-        </div>
-    </header>
+    <script src="sara_assets/script.js" defer></script>
+    <script src="js/ahmed_portfolio.js" defer></script>
 
-    <!-- About Section -->
-    <section id="about" class="container content-section text-center">
-        <div class="row">
-            <div class="col-lg-8 col-lg-offset-2">
-                <h2 id="helloo">Hello & Welcome!</h2>
-                <pre style="background-color: #483256;;color:white;width:100%">
-My name is Ahmed Abdul Fatah, though I sometimes go by xxqxpxx in online forums and coding related
-circles. The primary intention of this is for me to share some writings of mine and geek/tech-related things with the world and potentially get feedback on them and hopefully I can learn something new.
- 
-Academically, I attend the Computer Science school in Shorouk Academy, Egypt. expected to graduate in 2016, i tend to shine most strongly in Programming and problem solving also i love to go deep in
-the interesting fields of CS like Artificial Intelligence, Software Engineering , Big Data and 
-Algorithms. Out of that i like to read more in philosophy , psychology and interesting crash courses on different fields like biology and economics.
- 
-I started programming in 2012 and mostly practiced in online judges like CodeForces and some fun
-projects i find interesting mostly in C++ and some made in Jave/C# and whatever else I need to get
-the job done. also i have basic/beginner level knowledge in some other languages like
-Python, Objective-C which i gained through some courses i've done online from various sources like
-Coursera, MIT, Stanford, etc
-                </pre>
+   <!-- About Popup -->
+   <div id="about-popup" class="popup-overlay">
+     <div class="popup-container">
+       <button class="popup-close" id="close-popup">×</button>
+       <div class="popup-content">
+         <div class="main-content">
+           <h2>👋 Hello! I'm Ahmed Abdul Fatah</h2>
 
-                <h2 style="color:white">Contact</h2>
-                <p><a href="mailto:ahmedafatah@outlook.com" style="color:white">ahmedafatah@outlook.com</a>
-                </p>
-                <ul class="list-inline banner-social-buttons">
-                    <li>
-                        <a href="https://twitter.com/ahmedafatah" class="btn btn-default btn-lg"><i class="fa fa-twitter fa-fw"></i> <span class="network-name">Twitter</span></a>
-                    </li>
-                    <li>
-                        <a href="https://github.com/xxqxpxx" class="btn btn-default btn-lg"><i class="fa fa-github fa-fw"></i> <span class="network-name">Github</span></a>
-                    </li>
-                </ul>
+           <p class="intro-text">I'm a <span class="highlight">Senior Android Engineer</span> passionate about mobile development!</p>
 
+           <p class="description">I'm a problem-solving engineer with 6+ years of experience building Android applications that millions of users love. I specialize in modern Android development with Kotlin, Jetpack Compose, and Clean Architecture, creating high-performance apps that scale from startups to enterprise.</p>
 
-            </div>
-        </div>
-    </section>
+           <div class="skills-list">
+             <div class="skill-item">Kotlin & Java</div>
+             <div class="skill-item">Jetpack Compose</div>
+             <div class="skill-item">Clean Architecture</div>
+             <div class="skill-item">MVVM & MVI</div>
+             <div class="skill-item">Android Testing</div>
+             <div class="skill-item">Performance Optimization</div>
+             <div class="skill-item">Team Leadership</div>
+             <div class="skill-item">CI/CD</div>
+           </div>
+         </div>
 
-    <!-- Download Section -->
-    <section id="download" class="content-section text-center">
-        <div class="download-section">
-            <div class="container">
-                <div class="col-lg-8 col-lg-offset-2">
-                    <h2>Resume</h2>
-                    <p>You can preview my latest resume on Dropbox from here</p>
-                    <a href="https://www.dropbox.com/s/o52029uuu4576jk/Ahmed-Abdul-Fatah.pdf?dl=0" class="btn btn-default btn-lg">Visit Page</a>
-                </div>
-            </div>
-        </div>
-    </section>
-
-    <!-- Footer -->
-    <footer>
-        <div class="container text-center">
-            <p>Copyright &copy; 2015</p>
-        </div>
-    </footer>
-
-    <!-- jQuery -->
-    <script src="js/jquery.js"></script>
-
-    <!-- Bootstrap Core JavaScript -->
-    <script src="js/bootstrap.min.js"></script>
-
-    <!-- Plugin JavaScript -->
-    <script src="js/jquery.easing.min.js"></script>
-
-    <!-- Google Maps API Key - Use your own API key to enable the map feature. More information on the Google Maps API can be found at https://developers.google.com/maps/ -->
-    <script type="text/javascript" src="https://maps.googleapis.com/maps/api/js?key=AIzaSyCRngKslUGJTlibkQ3FkfTxj3Xss1UlZDA&sensor=false"></script>
-
-    <!-- Custom Theme JavaScript -->
-    <script src="js/grayscale.js"></script>
+         <div class="sticky-note">
+            <img src="sara_assets/sticky.png" alt="Sticky Note" class="sticky-image" loading="lazy" decoding="async">
+           <div class="sticky-text">
+             <p>I turn complex requirements into elegant Android solutions that users love! 📱</p>
+           </div>
+         </div>
+       </div>
+     </div>
+   </div>
 
 </body>
 

@@ -1,0 +1,239 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+   <meta charset="UTF-8">
+   <title>Contact - Ahmed Abdul Fatah</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+     <link rel="icon" type="image/png" href="img/favicon.ico">
+   <link rel="stylesheet" href="sara_assets/main.css">
+   <link rel="stylesheet" href="sara_assets/uicons-regular-rounded.css">
+   <link rel="stylesheet" href="sara_assets/uicons-solid-rounded.css">
+   <link rel="preconnect" href="https://fonts.googleapis.com">
+   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+   <link href="sara_assets/css2" rel="stylesheet">
+   <style>
+     /* Fix scrolling - override Sara's main.css */
+     body, html {
+       overflow: auto !important;
+       height: auto !important;
+     }
+
+     .contact-container {
+       max-width: 800px;
+       margin: 0 auto;
+       padding: 40px 20px;
+       background: rgba(255, 255, 255, 0.95);
+       border-radius: 20px;
+       box-shadow: 0 20px 60px rgba(0, 0, 0, 0.1);
+       position: relative;
+       z-index: 10;
+       margin-top: 50px;
+     }
+     .back-button {
+       position: fixed;
+       top: 20px;
+       left: 20px;
+       background: #7F6348;
+       color: white;
+       border: none;
+       padding: 12px 20px;
+       border-radius: 25px;
+       cursor: pointer;
+       font-size: 16px;
+       z-index: 100;
+       transition: all 0.3s ease;
+     }
+     .back-button:hover {
+       background: #6B5139;
+       transform: translateY(-2px);
+     }
+     .contact-grid {
+       display: grid;
+       grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+       gap: 30px;
+       margin: 40px 0;
+     }
+     .contact-card {
+       background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+       color: white;
+       padding: 30px;
+       border-radius: 20px;
+       text-align: center;
+       transition: transform 0.3s ease, box-shadow 0.3s ease;
+       cursor: pointer;
+     }
+     .contact-card:hover {
+       transform: translateY(-10px);
+       box-shadow: 0 20px 40px rgba(0, 0, 0, 0.2);
+     }
+     .contact-card.email {
+       background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+     }
+     .contact-card.linkedin {
+       background: linear-gradient(135deg, #0077B5 0%, #005885 100%);
+     }
+     .contact-card.github {
+       background: linear-gradient(135deg, #333 0%, #000 100%);
+     }
+     .contact-card.medium {
+       background: linear-gradient(135deg, #00ab6c 0%, #008f5a 100%);
+     }
+     .contact-icon {
+       font-size: 3em;
+       margin-bottom: 20px;
+     }
+     .contact-title {
+       font-size: 1.5em;
+       font-weight: bold;
+       margin-bottom: 10px;
+     }
+     .contact-info {
+       font-size: 1.1em;
+       opacity: 0.9;
+     }
+     .availability-section {
+       background: #f8f9fa;
+       padding: 30px;
+       border-radius: 20px;
+       margin: 40px 0;
+       text-align: center;
+     }
+     .status-indicator {
+       display: inline-block;
+       width: 12px;
+       height: 12px;
+       background: #28a745;
+       border-radius: 50%;
+       margin-right: 8px;
+       animation: pulse 2s infinite;
+     }
+     @keyframes pulse {
+       0% { opacity: 1; }
+       50% { opacity: 0.5; }
+       100% { opacity: 1; }
+     }
+     .cta-section {
+       background: linear-gradient(135deg, #7F6348 0%, #6B5139 100%);
+       color: white;
+       padding: 40px;
+       border-radius: 20px;
+       text-align: center;
+       margin-top: 40px;
+     }
+     .cta-button {
+       display: inline-block;
+       background: rgba(255, 255, 255, 0.2);
+       color: white;
+       padding: 15px 30px;
+       text-decoration: none;
+       border-radius: 25px;
+       margin: 10px;
+       transition: all 0.3s ease;
+       border: 2px solid rgba(255, 255, 255, 0.3);
+     }
+     .cta-button:hover {
+       background: rgba(255, 255, 255, 0.3);
+       transform: translateY(-2px);
+     }
+   </style>
+</head>
+<body>
+  <button class="back-button" onclick="window.location.href='index.html'">← Back to Portfolio</button>
+
+  <div class="contact-container">
+    <div style="text-align: center; margin-bottom: 40px;">
+      <img src="img/profilepic.png" alt="Ahmed Abdul Fatah" style="width: 150px; height: 150px; border-radius: 50%; object-fit: cover; margin-bottom: 20px; border: 4px solid #7F6348;">
+      <h1>Let's Connect!</h1>
+      <p style="font-size: 1.2em; color: #666; margin-top: 20px;">
+        I'm always open to discussing new opportunities, collaborating on exciting projects, or simply having a conversation about Android development and mobile technology.
+      </p>
+    </div>
+
+    <div class="contact-grid">
+      <div class="contact-card email" onclick="window.open('mailto:ahmedafatah@outlook.com', '_blank')">
+        <div class="contact-icon">📧</div>
+        <div class="contact-title">Email</div>
+        <div class="contact-info">ahmedafatah@outlook.com</div>
+        <p style="margin-top: 15px; font-size: 0.9em; opacity: 0.8;">Best for professional inquiries and collaboration opportunities</p>
+      </div>
+
+      <div class="contact-card linkedin" onclick="window.open('https://www.linkedin.com/in/ahmedafatah', '_blank')">
+        <div class="contact-icon">💼</div>
+        <div class="contact-title">LinkedIn</div>
+        <div class="contact-info">linkedin.com/in/ahmedafatah</div>
+        <p style="margin-top: 15px; font-size: 0.9em; opacity: 0.8;">Connect professionally and see my latest career updates</p>
+      </div>
+
+      <div class="contact-card github" onclick="window.open('https://github.com/xxqxpxx', '_blank')">
+        <div class="contact-icon">🐙</div>
+        <div class="contact-title">GitHub</div>
+        <div class="contact-info">github.com/xxqxpxx</div>
+        <p style="margin-top: 15px; font-size: 0.9em; opacity: 0.8;">Explore my code repositories and open source contributions</p>
+      </div>
+
+      <div class="contact-card medium" onclick="window.open('https://medium.com/@ahmedafatah', '_blank')">
+        <div class="contact-icon">✍️</div>
+        <div class="contact-title">Medium Blog</div>
+        <div class="contact-info">medium.com/@ahmedafatah</div>
+        <p style="margin-top: 15px; font-size: 0.9em; opacity: 0.8;">Read my technical articles and insights on Android development</p>
+      </div>
+    </div>
+
+    <div class="availability-section">
+      <h3><span class="status-indicator"></span>Currently Available for New Opportunities</h3>
+      <p style="margin-top: 20px; font-size: 1.1em; color: #666;">
+        I'm open to discussing senior Android engineering roles, consulting opportunities, and exciting mobile projects.
+        Whether you're a startup looking to build your MVP or an enterprise seeking to scale your mobile presence, let's talk!
+      </p>
+    </div>
+
+    <div style="background: #f8f9fa; padding: 30px; border-radius: 20px; margin: 30px 0;">
+      <h3 style="text-align: center; margin-bottom: 25px;">What I Can Help With</h3>
+      <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(200px, 1fr)); gap: 20px;">
+        <div style="text-align: center;">
+          <div style="font-size: 2em; margin-bottom: 10px;">📱</div>
+          <h4>Android App Development</h4>
+          <p style="color: #666; font-size: 0.9em;">Native Android apps using Kotlin and modern architecture</p>
+        </div>
+        <div style="text-align: center;">
+          <div style="font-size: 2em; margin-bottom: 10px;">🏗️</div>
+          <h4>Architecture Review</h4>
+          <p style="color: #666; font-size: 0.9em;">Code reviews and architectural guidance for existing projects</p>
+        </div>
+        <div style="text-align: center;">
+          <div style="font-size: 2em; margin-bottom: 10px;">🚀</div>
+          <h4>Performance Optimization</h4>
+          <p style="color: #666; font-size: 0.9em;">Improving app performance, reducing crashes, and optimizing UX</p>
+        </div>
+        <div style="text-align: center;">
+          <div style="font-size: 2em; margin-bottom: 10px;">👥</div>
+          <h4>Team Mentoring</h4>
+          <p style="color: #666; font-size: 0.9em;">Training teams on modern Android development practices</p>
+        </div>
+      </div>
+    </div>
+
+    <div class="cta-section">
+      <h3>Ready to Work Together?</h3>
+      <p style="margin: 20px 0; font-size: 1.1em; opacity: 0.9;">
+        Whether you have a specific project in mind or just want to explore possibilities, I'd love to hear from you.
+      </p>
+      <a href="mailto:ahmedafatah@outlook.com?subject=Project Inquiry&body=Hi Ahmed, I'd like to discuss..." class="cta-button">
+        Send me an email
+      </a>
+      <a href="https://www.linkedin.com/in/ahmedafatah" target="_blank" class="cta-button">
+        Connect on LinkedIn
+      </a>
+      <a href="resume.html" class="cta-button">
+        📄 View Resume
+      </a>
+    </div>
+
+    <div style="text-align: center; margin-top: 40px; padding: 20px; background: #f8f9fa; border-radius: 15px;">
+      <p style="color: #666; margin: 0;">
+        <strong>Response Time:</strong> I typically respond to emails within 24 hours during business days.
+      </p>
+    </div>
+  </div>
+</body>
+</html>

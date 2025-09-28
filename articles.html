@@ -1,0 +1,325 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+   <meta charset="UTF-8">
+   <title>Articles - Ahmed Abdul Fatah</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+     <link rel="icon" type="image/png" href="img/favicon.ico">
+   <link rel="stylesheet" href="sara_assets/main.css">
+   <link rel="stylesheet" href="sara_assets/uicons-regular-rounded.css">
+   <link rel="stylesheet" href="sara_assets/uicons-solid-rounded.css">
+   <link rel="preconnect" href="https://fonts.googleapis.com">
+   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+   <link href="sara_assets/css2" rel="stylesheet">
+   <style>
+     /* Fix scrolling - override Sara's main.css */
+     body, html {
+       overflow: auto !important;
+       height: auto !important;
+     }
+
+     .articles-container {
+       max-width: 1000px;
+       margin: 0 auto;
+       padding: 40px 20px;
+       background: rgba(255, 255, 255, 0.95);
+       border-radius: 20px;
+       box-shadow: 0 20px 60px rgba(0, 0, 0, 0.1);
+       position: relative;
+       z-index: 10;
+       margin-top: 50px;
+     }
+     .back-button {
+       position: fixed;
+       top: 20px;
+       left: 20px;
+       background: #7F6348;
+       color: white;
+       border: none;
+       padding: 12px 20px;
+       border-radius: 25px;
+       cursor: pointer;
+       font-size: 16px;
+       z-index: 100;
+       transition: all 0.3s ease;
+     }
+     .back-button:hover {
+       background: #6B5139;
+       transform: translateY(-2px);
+     }
+     .medium-hero {
+       background: linear-gradient(135deg, #00ab6c 0%, #008f5a 100%);
+       color: white;
+       padding: 50px;
+       border-radius: 20px;
+       text-align: center;
+       margin: 40px 0;
+       position: relative;
+       overflow: hidden;
+     }
+     .medium-hero::before {
+       content: '';
+       position: absolute;
+       top: 0;
+       left: 0;
+       right: 0;
+       bottom: 0;
+       background: url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 100 100"><defs><pattern id="grain" width="100" height="100" patternUnits="userSpaceOnUse"><circle cx="25" cy="25" r="1" fill="white" opacity="0.1"/><circle cx="75" cy="75" r="1" fill="white" opacity="0.1"/><circle cx="50" cy="10" r="0.5" fill="white" opacity="0.1"/></pattern></defs><rect width="100" height="100" fill="url(%23grain)"/></svg>');
+       opacity: 0.3;
+     }
+     .medium-logo {
+       font-size: 4em;
+       margin-bottom: 20px;
+       position: relative;
+       z-index: 2;
+     }
+     .hero-content {
+       position: relative;
+       z-index: 2;
+     }
+     .topics-grid {
+       display: grid;
+       grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+       gap: 25px;
+       margin: 40px 0;
+     }
+     .topic-card {
+       background: white;
+       border-radius: 15px;
+       padding: 25px;
+       box-shadow: 0 8px 25px rgba(0, 0, 0, 0.1);
+       transition: all 0.3s ease;
+       border: 2px solid transparent;
+     }
+     .topic-card:hover {
+       transform: translateY(-5px);
+       box-shadow: 0 15px 35px rgba(0, 0, 0, 0.15);
+       border-color: #00ab6c;
+     }
+     .topic-icon {
+       font-size: 2.5em;
+       margin-bottom: 15px;
+       text-align: center;
+     }
+     .topic-title {
+       font-size: 1.3em;
+       font-weight: bold;
+       color: #333;
+       margin-bottom: 15px;
+       text-align: center;
+     }
+     .topic-description {
+       color: #666;
+       line-height: 1.6;
+       text-align: center;
+     }
+     .cta-section {
+       background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+       color: white;
+       padding: 50px;
+       border-radius: 20px;
+       text-align: center;
+       margin: 40px 0;
+     }
+     .cta-button {
+       display: inline-block;
+       background: rgba(255, 255, 255, 0.2);
+       color: white;
+       padding: 15px 30px;
+       text-decoration: none;
+       border-radius: 25px;
+       margin: 15px;
+       font-size: 1.1em;
+       font-weight: 600;
+       transition: all 0.3s ease;
+       border: 2px solid rgba(255, 255, 255, 0.3);
+     }
+     .cta-button:hover {
+       background: rgba(255, 255, 255, 0.3);
+       transform: translateY(-3px);
+       box-shadow: 0 10px 25px rgba(0, 0, 0, 0.2);
+     }
+     .social-proof {
+       background: #f8f9fa;
+       padding: 30px;
+       border-radius: 20px;
+       margin: 40px 0;
+       text-align: center;
+     }
+     .stats-grid {
+       display: grid;
+       grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
+       gap: 20px;
+       margin: 30px 0;
+     }
+     .stat-item {
+       text-align: center;
+     }
+     .stat-number {
+       font-size: 2em;
+       font-weight: bold;
+       color: #00ab6c;
+       display: block;
+     }
+     .stat-label {
+       color: #666;
+       margin-top: 5px;
+     }
+     .newsletter-signup {
+       background: linear-gradient(135deg, #7F6348 0%, #6B5139 100%);
+       color: white;
+       padding: 40px;
+       border-radius: 20px;
+       text-align: center;
+       margin: 40px 0;
+     }
+   </style>
+</head>
+<body>
+  <button class="back-button" onclick="window.location.href='index.html'">← Back to Portfolio</button>
+
+  <div class="articles-container">
+    <div style="text-align: center; margin-bottom: 40px;">
+      <h1>Technical Articles & Insights</h1>
+      <p style="font-size: 1.2em; color: #666; margin-top: 20px;">
+        Sharing knowledge and experiences in Android development, mobile architecture, and software engineering
+      </p>
+    </div>
+
+    <div class="medium-hero">
+      <div class="hero-content">
+        <div class="medium-logo">✍️</div>
+        <h2 style="font-size: 2.5em; margin-bottom: 20px;">Medium Blog</h2>
+        <p style="font-size: 1.3em; margin-bottom: 30px; opacity: 0.9;">
+          Deep dives into Android development, architectural patterns, and the latest mobile technologies
+        </p>
+        <a href="https://medium.com/@ahmedafatah" target="_blank" style="display: inline-block; background: rgba(255, 255, 255, 0.2); color: white; padding: 15px 30px; text-decoration: none; border-radius: 25px; font-size: 1.2em; font-weight: 600; border: 2px solid rgba(255, 255, 255, 0.3); transition: all 0.3s ease;">
+          📖 Read My Articles on Medium
+        </a>
+      </div>
+    </div>
+
+    <div style="text-align: center; margin: 40px 0;">
+      <h2>What You'll Find in My Articles</h2>
+      <p style="color: #666; font-size: 1.1em; margin-top: 15px;">
+        I write about practical Android development challenges, architectural decisions, and lessons learned from building apps used by millions
+      </p>
+    </div>
+
+    <div class="topics-grid">
+      <div class="topic-card">
+        <div class="topic-icon">🤖</div>
+        <div class="topic-title">Modern Android Development</div>
+        <div class="topic-description">
+          Kotlin, Jetpack Compose, and the latest Android APIs. Exploring how modern tooling improves developer productivity and app performance.
+        </div>
+      </div>
+
+      <div class="topic-card">
+        <div class="topic-icon">🏗️</div>
+        <div class="topic-title">Clean Architecture</div>
+        <div class="topic-description">
+          MVVM, MVI patterns, and dependency injection. Real-world examples of structuring Android apps for maintainability and testability.
+        </div>
+      </div>
+
+      <div class="topic-card">
+        <div class="topic-icon">⚡</div>
+        <div class="topic-title">Performance Optimization</div>
+        <div class="topic-description">
+          Memory management, startup time optimization, and reducing ANRs. Practical techniques for building fast, responsive Android applications.
+        </div>
+      </div>
+
+      <div class="topic-card">
+        <div class="topic-icon">🧪</div>
+        <div class="topic-title">Testing Strategies</div>
+        <div class="topic-description">
+          Unit testing, UI testing, and TDD in Android. Building confidence in your code through comprehensive testing approaches.
+        </div>
+      </div>
+
+      <div class="topic-card">
+        <div class="topic-icon">🚀</div>
+        <div class="topic-title">CI/CD & DevOps</div>
+        <div class="topic-description">
+          Automating Android builds, deployments, and releases. Streamlining development workflows for faster, more reliable delivery.
+        </div>
+      </div>
+
+      <div class="topic-card">
+        <div class="topic-icon">💡</div>
+        <div class="topic-title">Industry Insights</div>
+        <div class="topic-description">
+          Lessons learned from working on apps with millions of users. Real-world challenges and solutions in mobile development.
+        </div>
+      </div>
+    </div>
+
+    <div class="social-proof">
+      <h3>Join the Community</h3>
+      <p style="color: #666; margin: 20px 0;">
+        Connect with fellow Android developers and stay updated on the latest trends and best practices
+      </p>
+      <div class="stats-grid">
+        <div class="stat-item">
+          <span class="stat-number">6+</span>
+          <div class="stat-label">Years Experience</div>
+        </div>
+        <div class="stat-item">
+          <span class="stat-number">10M+</span>
+          <div class="stat-label">App Downloads</div>
+        </div>
+        <div class="stat-item">
+          <span class="stat-number">100K+</span>
+          <div class="stat-label">Daily Users</div>
+        </div>
+        <div class="stat-item">
+          <span class="stat-number">5+</span>
+          <div class="stat-label">Countries</div>
+        </div>
+      </div>
+    </div>
+
+    <div class="cta-section">
+      <h3 style="font-size: 2em; margin-bottom: 20px;">Let's Connect & Share Knowledge</h3>
+      <p style="font-size: 1.2em; margin-bottom: 30px; opacity: 0.9;">
+        I believe in the power of sharing knowledge and learning from the community. Follow my work and let's discuss Android development!
+      </p>
+      <div>
+        <a href="https://medium.com/@ahmedafatah" target="_blank" class="cta-button">
+          📖 Follow on Medium
+        </a>
+        <a href="https://www.linkedin.com/in/ahmedafatah" target="_blank" class="cta-button">
+          💼 Connect on LinkedIn
+        </a>
+        <a href="https://github.com/xxqxpxx" target="_blank" class="cta-button">
+          🐙 Follow on GitHub
+        </a>
+      </div>
+    </div>
+
+    <div class="newsletter-signup">
+      <h3>Stay Updated</h3>
+      <p style="margin: 20px 0; font-size: 1.1em; opacity: 0.9;">
+        Want to be notified when I publish new articles? Follow me on Medium to get updates directly in your feed,
+        or connect with me on LinkedIn for professional insights and industry discussions.
+      </p>
+      <div style="margin-top: 30px;">
+        <p style="font-size: 0.9em; opacity: 0.8;">
+          🔔 Medium notifications • 💬 LinkedIn updates • 📧 Direct email for collaborations
+        </p>
+      </div>
+    </div>
+
+    <div style="text-align: center; margin-top: 40px; padding: 30px; background: #f8f9fa; border-radius: 15px;">
+      <h3>Have a Topic Suggestion?</h3>
+      <p style="margin: 20px 0; color: #666;">
+        I'm always looking for interesting topics to write about. If you have suggestions or want to collaborate on an article, let me know!
+      </p>
+      <a href="contact.html" style="display: inline-block; background: #7F6348; color: white; padding: 12px 25px; text-decoration: none; border-radius: 25px; margin: 0 10px;">💌 Get In Touch</a>
+      <a href="projects.html" style="display: inline-block; background: #666; color: white; padding: 12px 25px; text-decoration: none; border-radius: 25px; margin: 0 10px;">🚀 View My Projects</a>
+    </div>
+  </div>
+</body>
+</html>

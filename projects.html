@@ -1,0 +1,440 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+   <meta charset="UTF-8">
+   <title>Projects - Ahmed Abdul Fatah</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+     <link rel="icon" type="image/png" href="img/favicon.ico">
+   <link rel="stylesheet" href="sara_assets/main.css">
+   <link rel="stylesheet" href="sara_assets/uicons-regular-rounded.css">
+   <link rel="stylesheet" href="sara_assets/uicons-solid-rounded.css">
+   <link rel="preconnect" href="https://fonts.googleapis.com">
+   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+   <link href="sara_assets/css2" rel="stylesheet">
+   <style>
+     /* Fix scrolling - override Sara's main.css */
+     body, html {
+       overflow: auto !important;
+       height: auto !important;
+     }
+
+     .projects-container {
+       max-width: 1200px;
+       margin: 0 auto;
+       padding: 40px 20px;
+       background: rgba(255, 255, 255, 0.95);
+       border-radius: 20px;
+       box-shadow: 0 20px 60px rgba(0, 0, 0, 0.1);
+       position: relative;
+       z-index: 10;
+       margin-top: 50px;
+     }
+     .back-button {
+       position: fixed;
+       top: 20px;
+       left: 20px;
+       background: #7F6348;
+       color: white;
+       border: none;
+       padding: 12px 20px;
+       border-radius: 25px;
+       cursor: pointer;
+       font-size: 16px;
+       z-index: 100;
+       transition: all 0.3s ease;
+     }
+     .back-button:hover {
+       background: #6B5139;
+       transform: translateY(-2px);
+     }
+     .projects-grid {
+       display: grid;
+       grid-template-columns: repeat(auto-fit, minmax(400px, 1fr));
+       gap: 30px;
+       margin: 40px 0;
+     }
+     .project-card {
+       background: white;
+       border-radius: 20px;
+       overflow: hidden;
+       box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+       transition: all 0.3s ease;
+       border: 2px solid transparent;
+     }
+     .project-card:hover {
+       transform: translateY(-10px);
+       box-shadow: 0 25px 50px rgba(0, 0, 0, 0.15);
+       border-color: #7F6348;
+     }
+     .project-header {
+       background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+       color: white;
+       padding: 30px;
+       position: relative;
+       overflow: hidden;
+     }
+     .project-header.transflo {
+       background: linear-gradient(135deg, #FF6B6B 0%, #FF8E8E 100%);
+     }
+     .project-header.vezeeta {
+       background: linear-gradient(135deg, #4ECDC4 0%, #44A08D 100%);
+     }
+     .project-header.aevapay {
+       background: linear-gradient(135deg, #A8E6CF 0%, #7FCDCD 100%);
+     }
+     .project-header.kotobi {
+       background: linear-gradient(135deg, #FFD93D 0%, #FF6B6B 100%);
+     }
+     .project-header.buseet {
+       background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+     }
+     .project-header.ta7wela {
+       background: linear-gradient(135deg, #f093fb 0%, #f5576c 100%);
+     }
+     .project-icon {
+       font-size: 3em;
+       margin-bottom: 15px;
+     }
+     .project-title {
+       font-size: 1.8em;
+       font-weight: bold;
+       margin-bottom: 10px;
+     }
+     .project-subtitle {
+       font-size: 1.1em;
+       opacity: 0.9;
+     }
+     .project-content {
+       padding: 30px;
+     }
+     .project-stats {
+       display: flex;
+       justify-content: space-between;
+       margin: 20px 0;
+       flex-wrap: wrap;
+       gap: 10px;
+     }
+     .stat-item {
+       background: #f8f9fa;
+       padding: 10px 15px;
+       border-radius: 10px;
+       text-align: center;
+       flex: 1;
+       min-width: 100px;
+     }
+     .stat-value {
+       font-size: 1.2em;
+       font-weight: bold;
+       color: #7F6348;
+     }
+     .stat-label {
+       font-size: 0.85em;
+       color: #666;
+       margin-top: 2px;
+     }
+     .project-description {
+       color: #666;
+       line-height: 1.6;
+       margin: 20px 0;
+     }
+     .tech-stack {
+       display: flex;
+       flex-wrap: wrap;
+       gap: 8px;
+       margin: 20px 0;
+     }
+     .tech-tag {
+       background: #7F6348;
+       color: white;
+       padding: 5px 12px;
+       border-radius: 15px;
+       font-size: 0.85em;
+       font-weight: 500;
+     }
+     .achievements {
+       background: #f8f9fa;
+       padding: 20px;
+       border-radius: 15px;
+       margin: 20px 0;
+     }
+     .achievements ul {
+       margin: 10px 0;
+       padding-left: 20px;
+     }
+     .achievements li {
+       margin: 8px 0;
+       color: #555;
+     }
+     .github-link {
+       display: inline-block;
+       background: #333;
+       color: white;
+       padding: 10px 20px;
+       text-decoration: none;
+       border-radius: 25px;
+       margin-top: 15px;
+       transition: all 0.3s ease;
+     }
+     .github-link:hover {
+       background: #555;
+       transform: translateY(-2px);
+     }
+   </style>
+</head>
+<body>
+  <button class="back-button" onclick="window.location.href='index.html'">← Back to Portfolio</button>
+
+  <div class="projects-container">
+    <div style="text-align: center; margin-bottom: 40px;">
+      <h1>Featured Projects</h1>
+      <p style="font-size: 1.2em; color: #666; margin-top: 20px;">
+        A showcase of mobile applications I've built that serve millions of users worldwide
+      </p>
+    </div>
+
+    <div class="projects-grid">
+      <!-- Transflo Mobile+ -->
+      <div class="project-card">
+        <div class="project-header transflo">
+          <div class="project-icon">🚚</div>
+          <div class="project-title">Transflo Mobile+</div>
+          <div class="project-subtitle">Logistics Platform</div>
+        </div>
+        <div class="project-content">
+          <div class="project-stats">
+            <div class="stat-item">
+              <div class="stat-value">$115B+</div>
+              <div class="stat-label">Freight Annually</div>
+            </div>
+            <div class="stat-item">
+              <div class="stat-value">3.2M+</div>
+              <div class="stat-label">Downloads</div>
+            </div>
+            <div class="stat-item">
+              <div class="stat-value">100K+</div>
+              <div class="stat-label">Daily Users</div>
+            </div>
+          </div>
+          <div class="project-description">
+            Enterprise logistics platform serving the transportation industry. Led the migration from Java/MVC to Kotlin/MVI with Clean Architecture, significantly improving development velocity and app performance.
+          </div>
+          <div class="tech-stack">
+            <span class="tech-tag">Kotlin</span>
+            <span class="tech-tag">MVI</span>
+            <span class="tech-tag">Clean Architecture</span>
+            <span class="tech-tag">WorkManager</span>
+            <span class="tech-tag">Jetpack Compose</span>
+            <span class="tech-tag">Multiplatform</span>
+          </div>
+          <div class="achievements">
+            <h4>Key Achievements:</h4>
+            <ul>
+              <li>Reduced crash rate from 2.0% to 1.5%</li>
+              <li>15% improvement in feature development time</li>
+              <li>30% faster app startup through optimization</li>
+              <li>Enhanced security with ProGuard rules (60% vulnerability reduction)</li>
+            </ul>
+          </div>
+        </div>
+      </div>
+
+      <!-- Vezeeta Patient -->
+      <div class="project-card">
+        <div class="project-header vezeeta">
+          <div class="project-icon">🏥</div>
+          <div class="project-title">Vezeeta Patient</div>
+          <div class="project-subtitle">Healthcare Booking Platform</div>
+        </div>
+        <div class="project-content">
+          <div class="project-stats">
+            <div class="stat-item">
+              <div class="stat-value">5+</div>
+              <div class="stat-label">Countries</div>
+            </div>
+            <div class="stat-item">
+              <div class="stat-value">1M+</div>
+              <div class="stat-label">Downloads</div>
+            </div>
+            <div class="stat-item">
+              <div class="stat-value">35%</div>
+              <div class="stat-label">Telehealth Growth</div>
+            </div>
+          </div>
+          <div class="project-description">
+            Revolutionary healthcare platform connecting patients with doctors across multiple countries.
+            Developed critical telehealth features during COVID-19, enabling remote consultations and expanding healthcare access.
+          </div>
+          <div class="tech-stack">
+            <span class="tech-tag">Kotlin</span>
+            <span class="tech-tag">MVVM</span>
+            <span class="tech-tag">Video/Audio SDK</span>
+            <span class="tech-tag">ProGuard</span>
+            <span class="tech-tag">API Optimization</span>
+            <span class="tech-tag">Security</span>
+          </div>
+          <div class="achievements">
+            <h4>Key Achievements:</h4>
+            <ul>
+              <li>Launched telehealth feature in 4 weeks during pandemic</li>
+              <li>Reduced app startup time from 5s to 4s</li>
+              <li>50% reduction in security vulnerabilities</li>
+              <li>15% user base expansion through non-Google device support</li>
+            </ul>
+          </div>
+        </div>
+      </div>
+
+      <!-- AevaPay -->
+      <div class="project-card">
+        <div class="project-header aevapay">
+          <div class="project-icon">💰</div>
+          <div class="project-title">AevaPay</div>
+          <div class="project-subtitle">Cryptocurrency Payment App</div>
+        </div>
+        <div class="project-content">
+          <div class="project-stats">
+            <div class="stat-item">
+              <div class="stat-value">99.9%</div>
+              <div class="stat-label">Transaction Reliability</div>
+            </div>
+            <div class="stat-item">
+              <div class="stat-value">35%</div>
+              <div class="stat-label">Dev Time Reduction</div>
+            </div>
+            <div class="stat-item">
+              <div class="stat-value">4.5+</div>
+              <div class="stat-label">Play Store Rating</div>
+            </div>
+          </div>
+          <div class="project-description">
+            Cutting-edge cryptocurrency payment solution for POS machines. Built with modern Android architecture using Kotlin and Jetpack Compose, integrating secure payment processing with exceptional user experience.
+          </div>
+          <div class="tech-stack">
+            <span class="tech-tag">Kotlin</span>
+            <span class="tech-tag">Jetpack Compose</span>
+            <span class="tech-tag">MVVM</span>
+            <span class="tech-tag">Paymob SDK</span>
+            <span class="tech-tag">CI/CD</span>
+            <span class="tech-tag">Cryptocurrency</span>
+          </div>
+          <div class="achievements">
+            <h4>Key Achievements:</h4>
+            <ul>
+              <li>99.9% payment transaction reliability</li>
+              <li>35% reduction in UI development time with Compose</li>
+              <li>Deployment time reduced from 5 to 3 days</li>
+              <li>Maintained 4.5+ star rating through optimization</li>
+            </ul>
+          </div>
+        </div>
+      </div>
+
+      <!-- Kotobi by Vodafone -->
+      <div class="project-card">
+        <div class="project-header kotobi">
+          <div class="project-icon">📚</div>
+          <div class="project-title">Kotobi by Vodafone</div>
+          <div class="project-subtitle">Digital Reading Platform</div>
+        </div>
+        <div class="project-content">
+          <div class="project-stats">
+            <div class="stat-item">
+              <div class="stat-value">500K+</div>
+              <div class="stat-label">Downloads</div>
+            </div>
+            <div class="stat-item">
+              <div class="stat-value">10,000+</div>
+              <div class="stat-label">Arabic Books</div>
+            </div>
+            <div class="stat-item">
+              <div class="stat-value">30+</div>
+              <div class="stat-label">Periodicals</div>
+            </div>
+          </div>
+          <div class="project-description">
+            Digital library platform offering extensive Arabic publications. Enhanced user experience and engagement through new features while maintaining high app reliability and performance standards.
+          </div>
+          <div class="tech-stack">
+            <span class="tech-tag">Android SDK</span>
+            <span class="tech-tag">Bug Fixes</span>
+            <span class="tech-tag">Performance</span>
+            <span class="tech-tag">Arabic Content</span>
+            <span class="tech-tag">User Experience</span>
+          </div>
+          <div class="achievements">
+            <h4>Key Achievements:</h4>
+            <ul>
+              <li>30% improvement in app reliability</li>
+              <li>Enhanced user engagement features</li>
+              <li>Comprehensive Arabic content support</li>
+              <li>Stable performance with large content library</li>
+            </ul>
+          </div>
+        </div>
+      </div>
+
+      <!-- Additional Projects -->
+      <div class="project-card">
+        <div class="project-header buseet">
+          <div class="project-icon">🚌</div>
+          <div class="project-title">Buseet Driver App</div>
+          <div class="project-subtitle">Bus Management Solution</div>
+        </div>
+        <div class="project-content">
+          <div class="project-description">
+            Comprehensive bus management solution with real-time tracking capabilities. Built using modern Android architecture with Kotlin, MVP pattern, RxJava, and Firebase integration.
+          </div>
+          <div class="tech-stack">
+            <span class="tech-tag">Kotlin</span>
+            <span class="tech-tag">MVP</span>
+            <span class="tech-tag">RxJava</span>
+            <span class="tech-tag">Firebase</span>
+            <span class="tech-tag">Real-time Tracking</span>
+            <span class="tech-tag">GPS</span>
+          </div>
+        </div>
+      </div>
+
+      <div class="project-card">
+        <div class="project-header ta7wela">
+          <div class="project-icon">📦</div>
+          <div class="project-title">Ta7wela Supply Chain</div>
+          <div class="project-subtitle">Driver Management Platform</div>
+        </div>
+        <div class="project-content">
+          <div class="project-description">
+            Advanced supply chain application for drivers featuring GPS-based location reporting and real-time order management. Streamlined logistics operations with modern Android development practices.
+          </div>
+          <div class="tech-stack">
+            <span class="tech-tag">GPS Integration</span>
+            <span class="tech-tag">Real-time Updates</span>
+            <span class="tech-tag">Order Management</span>
+            <span class="tech-tag">Location Services</span>
+            <span class="tech-tag">Supply Chain</span>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div style="background: linear-gradient(135deg, #7F6348 0%, #6B5139 100%); color: white; padding: 40px; border-radius: 20px; text-align: center; margin-top: 40px;">
+      <h3>🚀 Impact at Scale</h3>
+      <p style="margin: 20px 0; font-size: 1.1em; opacity: 0.9;">
+        My applications have collectively served millions of users across multiple industries - from healthcare to logistics,
+        fintech to education. Each project represents a commitment to building robust, scalable, and user-centric mobile solutions.
+      </p>
+      <div style="margin-top: 30px;">
+        <a href="https://github.com/xxqxpxx" target="_blank" class="github-link">
+          🐙 View More on GitHub
+        </a>
+      </div>
+    </div>
+
+    <div style="text-align: center; margin-top: 40px; padding: 30px; background: #f8f9fa; border-radius: 15px;">
+      <h3>Interested in Working Together?</h3>
+      <p style="margin: 20px 0; color: #666;">Let's discuss how I can help bring your mobile app vision to life</p>
+      <a href="contact.html" style="display: inline-block; background: #7F6348; color: white; padding: 12px 25px; text-decoration: none; border-radius: 25px; margin: 0 10px;">Get In Touch</a>
+      <a href="about.html" style="display: inline-block; background: #666; color: white; padding: 12px 25px; text-decoration: none; border-radius: 25px; margin: 0 10px;">Learn More About Me</a>
+    </div>
+  </div>
+</body>
+</html>
